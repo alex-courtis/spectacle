@@ -24,6 +24,7 @@
 @property (nonatomic) IBOutlet ZKHotKeyRecorder *makeSmallerHotKeyRecorder;
 @property (nonatomic) IBOutlet ZKHotKeyRecorder *undoLastMoveHotKeyRecorder;
 @property (nonatomic) IBOutlet ZKHotKeyRecorder *redoLastMoveHotKeyRecorder;
+@property (nonatomic) IBOutlet NSButton *avoidBottomDockEnabled;
 @property (nonatomic) IBOutlet NSButton *loginItemEnabled;
 @property (nonatomic) IBOutlet NSPopUpButton *statusItemEnabled;
 
@@ -36,6 +37,8 @@
 - (IBAction)hideWindow: (id)sender;
 
 #pragma mark -
+
+- (IBAction)toggleAvoidBottomDock: (id)sender;
 
 - (IBAction)toggleLoginItem: (id)sender;
 

@@ -63,6 +63,8 @@
         loginItemEnabledState = NSOnState;
     }
     
+    _avoidBottomDockEnabled.state = [NSUserDefaults.standardUserDefaults boolForKey:SpectacleAvoidBottomDockEnabledPreference];
+    
     _loginItemEnabled.state = loginItemEnabledState;
     
     [_statusItemEnabled selectItemWithTag: isStatusItemEnabled ? 0 : 1];
@@ -107,6 +109,10 @@
 }
 
 #pragma mark -
+
+- (IBAction)toggleAvoidBottomDock: (id)sender {
+    [NSUserDefaults.standardUserDefaults setBool:_avoidBottomDockEnabled.state == NSOnState forKey:SpectacleAvoidBottomDockEnabledPreference];
+}
 
 - (IBAction)toggleLoginItem: (id)sender {
     NSBundle *applicationBundle = NSBundle.mainBundle;

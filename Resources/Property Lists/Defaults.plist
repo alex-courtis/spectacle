@@ -44,5 +44,7 @@
 	<true/>
 	<key>BackgroundAlertSuppressed</key>
 	<false/>
+	<key>AvoidBottomDockEnabled</key>
+	<false/>
 </dict>
 </plist>
